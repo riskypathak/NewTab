@@ -1,6 +1,6 @@
 ﻿
 document.addEventListener("DOMContentLoaded", function () {
-    chrome.management.getAll(getAllCallback);
+    //chrome.management.getAll(getAllCallback);
 });
 
 var getAllCallback = function (list) {

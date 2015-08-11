@@ -7,26 +7,26 @@ Reporting.INSTALL_URL = "http://anx.apnanalytics.com/tr.gif?&anxa=APNImeshToolba
 // helper function
 Reporting.addDoiPh = function (url) {
     if (url && typeof url === "string") {
-        return url + ((-1 == url.indexOf("?")) ? "?" : "&") + "doi="+Utils.getItem('doi');
+        return url + ((-1 == url.indexOf("?")) ? "?" : "&") + "doi=" + Utils.getItem('doi');
     }
     return "";
 };
 Reporting.addDoi = function (url) {
     if (url && typeof url === "string") {
-        return url + ((-1 == url.indexOf("?")) ? "?" : "&") + "dateOfInstall="+Utils.getItem('doi');
+        return url + ((-1 == url.indexOf("?")) ? "?" : "&") + "dateOfInstall=" + Utils.getItem('doi');
     }
     return "";
 };
 Reporting.install = function () {
-    //if (!localStorage.getItem('doi')){
-        Utils.setItem('doi', new Date().toJSON().substring(0,10));
+    //if (!localStorage.getItem('doi')) {
+        Utils.setItem('doi', new Date().toJSON().substring(0, 10));
         try {
             SendInstallStats();
             Utils.ajax(Reporting.INSTALL_URL);
-        } catch(e) {
-            console.error ('error in calling server method SendInstallStats: ' + e);
+        } catch (e) {
+            console.error('error in calling server method SendInstallStats: ' + e);
         }
-    //}
+   // }
 };
 
 Reporting.homePhone = function () {
@@ -38,26 +38,27 @@ Reporting.homePhone = function () {
 
     //function report() {
     //    try {
-            SendLoginStats();
-            Utils.ajax(Reporting.addDoiPh(Reporting.PH_HOME_URL));
-            localStorage.setItem("prevPhoneHomeTime", new Date().getTime());
+    SendLoginStats();
+   // Utils.ajax(Reporting.addDoiPh(Reporting.PH_HOME_URL));
+   // localStorage.setItem("prevPhoneHomeTime", new Date().getTime());
     //    } catch(e) {
     //        console.error ('error in calling server method SendLoginStats: ' + e);
     //    }
     //}
-    setTimeout(function() {
-        Utils.timer(report, interval, prevPhoneHome);
-    }, 5000);
+    //setTimeout(function () {
+    //    Utils.timer(report, interval, prevPhoneHome);
+    //}, 5000);
 };
 
 Reporting.set_searchURL = function () {
+    debugger;
     var buildUrl = function (url, params) {
         if (url && typeof url === "string") {
             if (url.indexOf("?") > -1) {
-                url = url.split ("?")[0];
+                url = url.split("?")[0];
                 if (url) {
                     url += (params ? ("?" + params) : "")
-                    return Reporting.addDoi (url) +
+                    return Reporting.addDoi(url) +
                             "&d=" + encodeURIComponent(Utils.getItem('d')) +
                             "&v=" + encodeURIComponent(Utils.getItem('v'));
                 }
@@ -66,20 +67,20 @@ Reporting.set_searchURL = function () {
         return "";
     };
 
-    if (!Utils.getItem('d') || ((Utils.getItem('d')).indexOf ('undefined') > -1) ||
-        !Utils.getItem('v') || ((Utils.getItem('v')).indexOf ('undefined') > -1)) {
+    if (!Utils.getItem('d') || ((Utils.getItem('d')).indexOf('undefined') > -1) ||
+        !Utils.getItem('v') || ((Utils.getItem('v')).indexOf('undefined') > -1)) {
         try {
             GetSearchParameters(function (d, v) {
                 Utils.setItem('d', d);
                 Utils.setItem('v', v);
                 Utils.setItem("searchURL", buildUrl(Config.searchURL, Reporting.NT_PARAM));
             });
-        } catch(e) {
-            console.error ('error in calling server method GetSearchParameters: ' + e);
+        } catch (e) {
+            console.error('error in calling server method GetSearchParameters: ' + e);
         }
     }
 };
 debugger;
-Reporting.install ();
-Reporting.homePhone ();
-setTimeout(Reporting.set_searchURL, 5000);
+Reporting.install();
+//Reporting.homePhone();
+//setTimeout(Reporting.set_searchURL, 5000); //MAY BE USED LATER

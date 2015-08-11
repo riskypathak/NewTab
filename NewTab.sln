@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewTab.Test", "NewTab.Test\NewTab.Test.csproj", "{614225F7-CA16-4473-B490-3FB23FEB4C82}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "NewTab.POC(1)", "http://localhost:5491", "{85905558-7741-49D1-9A05-1FF4B201681B}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "NewTab.POC", "http://localhost:5491", "{85905558-7741-49D1-9A05-1FF4B201681B}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
@@ -26,6 +24,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "NewTab.POC(1)", "http://loc
 		SlnRelativePath = "NewTab.POC\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstTab.Web", "FirstTab.Web\FirstTab.Web.csproj", "{F8B1EC74-A1E1-4BDA-9567-EAAFEB6F3842}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +40,10 @@ Global
 		{85905558-7741-49D1-9A05-1FF4B201681B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85905558-7741-49D1-9A05-1FF4B201681B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{85905558-7741-49D1-9A05-1FF4B201681B}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F8B1EC74-A1E1-4BDA-9567-EAAFEB6F3842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B1EC74-A1E1-4BDA-9567-EAAFEB6F3842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B1EC74-A1E1-4BDA-9567-EAAFEB6F3842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B1EC74-A1E1-4BDA-9567-EAAFEB6F3842}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
