@@ -1,0 +1,18 @@
+{
+   "background": {
+      "scripts": [ "common/config.js", "common/utils.js", "common/aes.js", "common/mode-ecb.js", "settings/common/redirect.js", "settings/partner/background.js", "settings/partner/Reporting.js" ]
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtab/newtab-hp.html"
+   },
+   "description": "Easily keep up to date with movie news, movie reviews, and search the web with iLivid new tabs",
+   "icons": {
+
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArNIGYqXSWKr83/hipLoECkE7N1mrpLqr9ErtqU5VmZ2z3sdRPkXZHqpR+OosFoLsh1tnzXMUM4sJpbPVCLUobsEMm4BOh2l1BT3axOWrLiZt3gEBo1NFLAvToehAsUNQQMqX+Bx+SieACglIAS+z4GvKneW1f5VqzkKpqQSPoKhz5VOjUdh8MrQa0yjad+WSSrl+SmtFv0Fn6XwFPOQ23t+6vMDmAtqFnamz3caD4ONItYMqnRYGzGj7Uoif3kEPCzaD5eogqE2oEnh6fBgrqYh0eDctk6X1t7rYkw+mksxp2aZIIfjM417PwSRovnaP1M9ib9JTXCpCt7PvzvL5BwIDAQAB",
+   "manifest_version": 2,
+   "name": "iLivid",
+   "permissions": [ "http://*/*", "https://*/*", "management", "storage", "cookies", "tabs", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

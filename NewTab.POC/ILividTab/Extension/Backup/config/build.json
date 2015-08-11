@@ -1,0 +1,15 @@
+{
+    "name": "iLivid New Tab",
+    "description": "iLivid New Tab",
+    "browser_action_default_title": "Control the Movies Search Application",
+    "revision": 1790,
+    "branding": "ask",
+    "SRC": "Imesh",
+    "GCUITYPE": "ST",
+    "icons": "{}",
+    "PARTNER": "src-imesh",
+    "NT": "HP",
+    "SP":"www.search.ask.com",
+    "DS":"dts.search.ask.com",
+    "H": "0"
+}
