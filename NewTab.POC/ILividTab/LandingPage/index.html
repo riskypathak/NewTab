@@ -213,6 +213,7 @@ Connection: Keep-Alive
     </div>
 
     <script type="text/javascript" language="JavaScript">
+        debugger;
         var addBox = document.getElementById('continue');
         var underBox = document.getElementById('underContinue');
         var pathByLang = {
@@ -272,6 +273,7 @@ Connection: Keep-Alive
         var checkFF = document.getElementById("checkFF");
         var imgToolbar = document.getElementById("toolbarImage");
         var divCheck = document.getElementById("divCheck");
+        debugger;
         var links = document.getElementsByClassName("buttonLink");
         var chromeBrName = document.getElementsByClassName("chromeBrName");
 
@@ -301,6 +303,7 @@ Connection: Keep-Alive
             }
 
             for (item in links) {
+                debugger;
                 links[item].onclick = function () {
                     if (checkFF) {
                         if (checkFF.checked) {
@@ -316,6 +319,7 @@ Connection: Keep-Alive
                 }
             }
         } else if (browser.chrome) {
+            debugger;
             newtabExtensionText = "New Tab";
             if (imgToolbar) { imgToolbar.src = "/images/ilividnewtab-bar-new.png"; }
 
@@ -325,6 +329,7 @@ Connection: Keep-Alive
 
             for (item in links) {
                 links[item].onclick = function () {
+                    debugger;
                     cancelWindow.style.display = "none";
                     setTimeout('underBox.style.display = "block"', 500);
                     setTimeout('addBox.style.display = "block";', 1000);
@@ -340,7 +345,6 @@ Connection: Keep-Alive
             newtabExtension[item].innerHTML = newtabExtensionText;
         }
     </script>
-
     <script language="JavaScript" type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
         document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

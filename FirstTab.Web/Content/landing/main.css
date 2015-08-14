@@ -19,19 +19,19 @@ a {
     background: #ffffff;
 }
 .rc {
-    background: url("rc.png") right repeat-y;
+    /*background: url("rc.png") right repeat-y;*/
 }
 .bc {
-    background: url("bc.png") bottom repeat-x;
+    /*background: url("bc.png") bottom repeat-x;*/
 }
 .lc {
-    background: url("lc.png") left repeat-y;
+    /*background: url("lc.png") left repeat-y;*/
 }
 .br {
-    background: url("br.png") bottom right no-repeat;
+    /*background: url("br.png") bottom right no-repeat;*/
 }
 .bl {
-    background: url("bl.png") bottom left no-repeat;
+    /*background: url("bl.png") bottom left no-repeat;*/
     padding: 15px 70px 50px;
 }
 .logo {

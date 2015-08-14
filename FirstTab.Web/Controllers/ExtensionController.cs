@@ -16,7 +16,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Xml.Linq;
-
+using NewTab.Data.Models;
 
 namespace FirstTab.Web.Controllers
 {
@@ -34,8 +34,8 @@ namespace FirstTab.Web.Controllers
             {
                 var doc = XDocument.Parse(xmlString);
                 var dataNode = doc.Root.Elements("data").Elements("ext_install_stats_request").Elements("client_info");
-                Models.ExtensionInfo items = (from r in dataNode
-                                              select new Models.ExtensionInfo()
+                UserInfo items = (from r in dataNode
+                                  select new UserInfo()
                                               {
                                                   AppId = r.Element("appid").Value.ToString(),
                                                   BrowserName = r.Element("bname").Value.ToString(),
@@ -50,8 +50,8 @@ namespace FirstTab.Web.Controllers
                                                   Platform = r.Element("ostype").Value.ToString(),
                                                   SysId = r.Element("sysid").Value.ToString()
                                               }).FirstOrDefault();
-                Models.ExtensionInfo model = new Models.ExtensionInfo();
-                db.Insert<Models.ExtensionInfo>(items);
+                UserInfo model = new UserInfo();
+                db.Insert<UserInfo>(items);
 
             }
         }
